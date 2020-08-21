@@ -12,7 +12,7 @@ export class LocalStorageItem extends Task{
     
     addItemsFromLocalStore(arr = [], index){
         arr.map(item => {
-            this.category[index].insertAdjacentHTML('beforeend', item)
+            this.categorys[index].insertAdjacentHTML('beforeend', item)
         })
     }
     
