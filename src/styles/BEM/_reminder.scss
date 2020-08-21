@@ -106,12 +106,17 @@
         color: #fff;
         border-radius: 3px;
         font-size: 17px;
+        width: 25px;
         transition: .3s ease;
         &:focus{
             outline: none;
         }
         &:hover{
             box-shadow: 0 0 9px 2px black;
+        }
+        
+        @include media-breakpoint-down(md){
+            font-size: 14px;
         }
     }
 

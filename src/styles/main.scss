@@ -13,6 +13,10 @@
 @import './BEM/window';
 @import './BEM/footer';
 
+input, textarea, select {
+    -webkit-appearance: none;
+}
+
 p{
     margin: 0;
 }

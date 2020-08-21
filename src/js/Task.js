@@ -128,6 +128,7 @@ export class Task extends ToDo{
             if(event.target.hasAttribute('data-btn-complete')){
                 let counter = 10
                 const button = event.target
+                button.disabled = true
                 button.classList.add('reminder__btn-complete')
                 let item = document.getElementById(`${event.target.id}`)
                 item.classList.add('reminder-complete')
