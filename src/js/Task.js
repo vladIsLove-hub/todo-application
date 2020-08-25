@@ -6,7 +6,7 @@ import {oneIndexCell, twoIndexCell, threeIndexCell, fourIndexCell} from './const
 export class Task extends ToDo{
     constructor(categorySelector){
         super(...getDefaultTaskElemts())
-        this.categorys = document.querySelectorAll(categorySelector)
+        this.categorys = document.querySelectorAll(categorySelector) || []
         this.itemsTexts = document.querySelectorAll('.category__complitly') || []
     }
 
@@ -42,7 +42,12 @@ export class Task extends ToDo{
 
     get toHTML(){
         return `
-        <div draggable="true" id="${this.getId()}" class="reminder reminder_indent">
+        <div 
+        draggable="true"
+        id="${this.getId()}"
+        class="reminder reminder_indent"
+        data-reminder="true"
+        >
             <div class="reminder__datetime">
                 <p class="reminder__date">
                     ${this.getDateCreating()}
